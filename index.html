@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PharmaLog | Eczaneler İçin Danışan Takip Programı</title>
+  <meta name="description" content="PharmaLog; eczaneler için yerel ağda çalışan danışan, uzman günü, takip, KVKK izinleri ve dermokozmetik kayıt programıdır.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #06101f;
+      --bg-soft: #0d1930;
+      --card: rgba(15, 25, 46, .78);
+      --card-strong: rgba(22, 35, 62, .92);
+      --text: #eef5ff;
+      --muted: #a4b2c7;
+      --soft: #d8e4f7;
+      --line: rgba(255, 255, 255, .1);
+      --brand: #14b8a6;
+      --brand-2: #7c3aed;
+      --brand-3: #f43f5e;
+      --warning: #fbbf24;
+      --shadow: 0 28px 80px rgba(0, 0, 0, .35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(20, 184, 166, .24), transparent 34rem),
+        radial-gradient(circle at 86% 12%, rgba(124, 58, 237, .26), transparent 35rem),
+        radial-gradient(circle at 55% 80%, rgba(244, 63, 94, .12), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 36px)); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(6, 16, 31, .78);
+      backdrop-filter: blur(18px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: 0 14px 34px rgba(20, 184, 166, .16);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 15px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 900;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover { transform: translateY(-2px); border-color: rgba(255, 255, 255, .22); }
+    .button.primary {
+      border: 0;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 18px 42px rgba(20, 184, 166, .2);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 42px;
+      align-items: center;
+      padding: 86px 0 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      padding: 8px 12px;
+      border: 1px solid rgba(20, 184, 166, .28);
+      border-radius: 999px;
+      background: rgba(20, 184, 166, .1);
+      color: #8ff3e6;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(20, 184, 166, .12);
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      max-width: 780px;
+      font-size: clamp(40px, 6.3vw, 76px);
+      line-height: .96;
+      letter-spacing: -.065em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .trust-item {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 22px;
+      letter-spacing: -.03em;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .product-card {
+      position: relative;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(21, 34, 61, .94), rgba(9, 18, 34, .94));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: -90px -80px auto auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(20, 184, 166, .22);
+      filter: blur(20px);
+    }
+
+    .app-window {
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 26px;
+      background: #0b1425;
+      overflow: hidden;
+    }
+
+    .window-top {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .dots { display: flex; gap: 8px; }
+    .dots span {
+      width: 11px;
+      height: 11px;
+      border-radius: 99px;
+      background: #334155;
+    }
+    .dots span:nth-child(1) { background: #fb7185; }
+    .dots span:nth-child(2) { background: #fbbf24; }
+    .dots span:nth-child(3) { background: #34d399; }
+
+    .app-body {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      min-height: 410px;
+    }
+
+    .sidebar {
+      padding: 18px 14px;
+      border-right: 1px solid var(--line);
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .side-pill {
+      height: 34px;
+      margin-bottom: 11px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .06);
+    }
+    .side-pill.active { background: linear-gradient(135deg, rgba(20, 184, 166, .35), rgba(124, 58, 237, .28)); }
+
+    .content {
+      padding: 18px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .metric, .list-row {
+      border: 1px solid rgba(255, 255, 255, .09);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .045);
+      padding: 14px;
+    }
+
+    .metric small, .list-row small { color: var(--muted); font-weight: 800; }
+    .metric b { display: block; margin-top: 8px; font-size: 24px; letter-spacing: -.04em; }
+    .list-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .status {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(20, 184, 166, .13);
+      color: #67e8f9;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    section { padding: 46px 0; }
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+    .section-title p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .feature {
+      min-height: 230px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: var(--card);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, .16);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      background: rgba(20, 184, 166, .12);
+      color: #7dd3fc;
+      font-size: 22px;
+    }
+
+    .feature h3 { margin: 0 0 10px; font-size: 20px; }
+    .feature p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+    .split {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 13px;
+      align-items: start;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .steps b {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: rgba(124, 58, 237, .18);
+      color: var(--text);
+    }
+
+    .download-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(20, 184, 166, .16), rgba(124, 58, 237, .14)),
+        var(--card-strong);
+    }
+
+    .download-box p, .panel p { color: var(--muted); line-height: 1.65; }
+    code {
+      padding: 3px 7px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .08);
+      color: var(--soft);
+    }
+
+    .notice {
+      border-color: rgba(251, 191, 36, .26);
+      background: rgba(251, 191, 36, .07);
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 36px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .hero, .split, .download-box { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .app-body { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 54px; }
+      .trust, .grid, .metric-grid { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Ana menü">
+      <a class="brand" href="#top" aria-label="PharmaLog ana sayfa">
+        <img src="assets/pharmalog-logo.png" alt="PharmaLog logosu">
+        <span>PharmaLog</span>
+      </a>
+      <div class="nav-links">
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#kurulum">Kurulum</a>
+        <a href="#indir">İndir</a>
+        <a href="#guncellemeler">Güncellemeler</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="wrap hero">
+      <div>
+        <span class="eyebrow">Eczane içi yerel ağ kullanımına hazır</span>
+        <h1>Eczaneler için danışan, uzman günü ve takip yönetimi.</h1>
+        <p class="lead">
+          PharmaLog; danışan kayıtları, arama listeleri, uzman günü randevuları,
+          dermokozmetik formlar, KVKK/iletişim izinleri ve ekip içi terminal kullanımı
+          için geliştirilen eczane odaklı takip programıdır.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="/downloads/PharmaLog-Kurulum.zip">Programı İndir</a>
+          <a class="button" href="#kurulum">Kurulumu Gör</a>
+        </div>
+        <div class="trust" aria-label="Öne çıkan bilgiler">
+          <div class="trust-item"><strong>Yerel</strong><span>Veri eczane bilgisayarında</span></div>
+          <div class="trust-item"><strong>Anlık</strong><span>Aynı ağdaki terminallerle</span></div>
+          <div class="trust-item"><strong>Güvenli</strong><span>Eczane bazlı veri ayrımı</span></div>
+        </div>
+      </div>
+
+      <div class="product-card" aria-label="PharmaLog uygulama önizlemesi">
+        <div class="app-window">
+          <div class="window-top">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <strong>PharmaLog Panel</strong>
+          </div>
+          <div class="app-body">
+            <aside class="sidebar">
+              <div class="side-pill active"></div>
+              <div class="side-pill"></div>
+              <div class="side-pill"></div>
+              <div class="side-pill"></div>
+              <div class="side-pill"></div>
+            </aside>
+            <div class="content">
+              <div class="metric-grid">
+                <div class="metric"><small>Danışan</small><b>Aktif takip</b></div>
+                <div class="metric"><small>Uzman günü</small><b>Randevu listesi</b></div>
+              </div>
+              <div class="list-row"><div><strong>Arama Listesi</strong><br><small>Geciken takip kayıtları</small></div><span class="status">Canlı</span></div>
+              <div class="list-row"><div><strong>KVKK / İYS İzinleri</strong><br><small>Danışan izin alanları</small></div><span class="status">Kayıtlı</span></div>
+              <div class="list-row"><div><strong>Terminal Bağlantısı</strong><br><small>Ana bilgisayar üzerinden ortak kullanım</small></div><span class="status">Yerel ağ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ozellikler" class="wrap">
+      <div class="section-title">
+        <h2>Eczane iş akışına göre tasarlandı.</h2>
+        <p>PharmaLog, internet sunucusuna bağımlı olmadan eczanenin kendi bilgisayarında çalışacak şekilde düzenlenmiştir.</p>
+      </div>
+      <div class="grid">
+        <article class="feature">
+          <div class="icon">👥</div>
+          <h3>Danışan Takibi</h3>
+          <p>Danışan bilgileri, notlar, formlar, anamnez kayıtları ve takip geçmişi tek ekranda tutulur.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">📅</div>
+          <h3>Uzman Günü</h3>
+          <p>Firma etkinlikleri, davet listeleri ve randevular eczane ekibi tarafından ortak takip edilir.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">☎️</div>
+          <h3>Arama Listeleri</h3>
+          <p>Takip zamanı gelen danışanlar listelenir, arandı bilgisi ve gecikme durumu kolayca yönetilir.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">🔐</div>
+          <h3>KVKK ve İletişim İzinleri</h3>
+          <p>SMS, arama, e-posta ve İYS kontrol sorumluluğu için açık izin alanları kayıt ekranında bulunur.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">🖥️</div>
+          <h3>Ana Bilgisayar + Terminal</h3>
+          <p>Bir bilgisayar ana sunucu olur; aynı Wi‑Fi/ağdaki diğer bilgisayarlar terminal olarak bağlanır.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">⬆️</div>
+          <h3>Güncelleme Kontrolü</h3>
+          <p>Yeni sürüm yayımlandığında program haber verir; güncelleme paketi veritabanına dokunmadan uygulanır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="kurulum" class="wrap split">
+      <div class="panel">
+        <h2>Kurulum Mantığı</h2>
+        <p>Her eczane kendi verisini kendi ana bilgisayarında saklar. Terminal bilgisayarlar sadece aynı yerel ağdaki ana bilgisayara bağlanır.</p>
+        <ul class="steps">
+          <li><b>1</b><span>Ana bilgisayara Node.js ve PharmaLog ana bilgisayar klasörü kurulur.</span></li>
+          <li><b>2</b><span>Ana bilgisayar için sabit yerel IP ayarlanır ve güvenlik duvarı izni verilir.</span></li>
+          <li><b>3</b><span>Terminal bilgisayarlara PharmaLog Terminal klasörü kurulur.</span></li>
+          <li><b>4</b><span>Terminal adres dosyası ile bağlantı otomatik yapılır; elle IP yazmak gerekmez.</span></li>
+        </ul>
+      </div>
+      <div class="panel notice">
+        <h2>Veri Ayrımı</h2>
+        <p>
+          PharmaLog’da her eczane için ayrı veritabanı kullanılır. Yeni eczane kurulumu boş veritabanıyla başlar;
+          mevcut eczane kurulumu ise sadece o eczaneye ait danışan, firma, uzman günü ve randevu verileriyle hazırlanır.
+        </p>
+        <p>
+          Güncelleme paketleri program dosyalarını yeniler; <code>database.sqlite</code> ve <code>uploads</code> klasörüne dokunmaz.
+        </p>
+      </div>
+    </section>
+
+    <section id="indir" class="wrap">
+      <div class="panel download-box">
+        <div>
+          <h2>PharmaLog Kurulum Paketi</h2>
+          <p>Yeni ana bilgisayar kurulumu için güncel paket. İndirme dosyası hazır olduğunda bu buton doğrudan kurulum paketine yönlenir.</p>
+        </div>
+        <a class="button primary" href="/downloads/PharmaLog-Kurulum.zip">Kurulum Paketini İndir</a>
+      </div>
+    </section>
+
+    <section id="guncellemeler" class="wrap split">
+      <div class="panel">
+        <h2>Güncelleme Merkezi</h2>
+        <p>
+          Kurulu programlar güncelleme bilgisini <code>/updates/manifest.json</code> dosyasından kontrol eder.
+          Yeni sürüm varsa kullanıcıya “Şimdi” veya “Daha sonra” seçenekleri gösterilir.
+        </p>
+      </div>
+      <div class="panel">
+        <h2>Destek</h2>
+        <p>
+          Kurulum, terminal bağlantısı, eczane verisi ayırma ve güncelleme paketi hazırlama işlemleri için PharmaLog destek ekibiyle iletişime geçin.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 PharmaLog. Eczane danışan takip programı.</span>
+      <span>Tanıtım · Kurulum · Güncelleme</span>
+    </div>
+  </footer>
+</body>
+</html>

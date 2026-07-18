@@ -1,0 +1,6 @@
+Bu klasöre sürüm güncelleme paketleri koyulacak:
+
+pharmalog-1.0.1.zip
+pharmalog-1.0.2.zip
+
+manifest.json içindeki version ve packageUrl değerleri her yeni sürümde güncellenmelidir.
