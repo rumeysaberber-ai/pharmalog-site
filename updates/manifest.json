@@ -1,14 +1,15 @@
-{
-  "version": "1.0.2",
-  "title": "PharmaLog 1.0.2 Güncellemesi",
-  "publishedAt": "2026-07-06",
+﻿{
+  "version": "1.0.3",
+  "title": "PharmaLog 1.0.3 Guncellemesi",
+  "publishedAt": "2026-07-19",
   "mandatory": false,
-  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.2.zip",
-  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.2.zip",
+  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.3.zip",
+  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.3.zip",
   "notes": [
-    "Ekranın gereksiz yere sürekli yenilenmesine neden olan otomatik senkronizasyon davranışı düzeltildi.",
-    "KVKK / iletişim izinleri alanı eklendi.",
-    "Genel Bakış arama listesi temizleme işlemi düzeltildi.",
-    "Yerel ağ kullanımına uygun güncelleme bildirimi eklendi."
+    "Ileti Yonetim Sistemi / Verimor entegrasyon altyapisi eklendi.",
+    "Ayarlar ekranina Verimor kullanici adi, API sifresi, SMS basligi ve izin kaynagi alanlari eklendi.",
+    "Yeni danisan kaydinda secilen SMS, arama ve e-posta izinleri IYS sistemine gonderilecek sekilde baglandi.",
+    "IYS gonderim gecmisi ve hata kayitlari programa eklendi.",
+    "Bu guncelleme danisan veritabanina ve uploads dosyalarina dokunmaz."
   ]
 }
