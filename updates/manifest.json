@@ -1,14 +1,14 @@
 ﻿{
-  "version": "1.0.4",
-  "title": "PharmaLog 1.0.4 Otomatik Guncelleme",
+  "version": "1.0.5",
+  "title": "PharmaLog 1.0.5 Sürüm Kontrol Düzeltmesi",
   "publishedAt": "2026-07-19",
   "mandatory": false,
-  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.4.zip",
-  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.4.zip",
+  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.5.zip",
+  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.5.zip",
   "notes": [
-    "Guncelleme dosyasi artik sadece indirilmez; onaydan sonra otomatik uygulanir.",
-    "Guncelleme sirasinda database.sqlite, uploads klasoru ve kullanici verileri korunur.",
-    "Program guncelleme sonrasi otomatik yeniden baslatilmaya calisir.",
-    "Ileti Yonetim Sistemi / Verimor entegrasyon altyapisi bu surumde de dahildir."
+    "Program sürümü güncelleme butonunun yanında sürekli gösterilir.",
+    "Güncelleme kontrolü artık mevcut sürüm ile son yayınlanan sürüm aynıysa 'güncelleme yok' der.",
+    "Sürüm bilgisi server yeniden başlamadan eski kalmasın diye her kontrolde dosyadan okunur.",
+    "Güncelleme kurulumu yine database.sqlite ve uploads klasörüne dokunmadan uygulanır."
   ]
 }
