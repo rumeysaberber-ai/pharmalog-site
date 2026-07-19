@@ -1,15 +1,14 @@
 ﻿{
-  "version": "1.0.3",
-  "title": "PharmaLog 1.0.3 Guncellemesi",
+  "version": "1.0.4",
+  "title": "PharmaLog 1.0.4 Otomatik Guncelleme",
   "publishedAt": "2026-07-19",
   "mandatory": false,
-  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.3.zip",
-  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.3.zip",
+  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.4.zip",
+  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.4.zip",
   "notes": [
-    "Ileti Yonetim Sistemi / Verimor entegrasyon altyapisi eklendi.",
-    "Ayarlar ekranina Verimor kullanici adi, API sifresi, SMS basligi ve izin kaynagi alanlari eklendi.",
-    "Yeni danisan kaydinda secilen SMS, arama ve e-posta izinleri IYS sistemine gonderilecek sekilde baglandi.",
-    "IYS gonderim gecmisi ve hata kayitlari programa eklendi.",
-    "Bu guncelleme danisan veritabanina ve uploads dosyalarina dokunmaz."
+    "Guncelleme dosyasi artik sadece indirilmez; onaydan sonra otomatik uygulanir.",
+    "Guncelleme sirasinda database.sqlite, uploads klasoru ve kullanici verileri korunur.",
+    "Program guncelleme sonrasi otomatik yeniden baslatilmaya calisir.",
+    "Ileti Yonetim Sistemi / Verimor entegrasyon altyapisi bu surumde de dahildir."
   ]
 }
