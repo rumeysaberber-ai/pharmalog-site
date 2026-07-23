@@ -1,14 +1,15 @@
 ﻿{
-  "version": "1.0.6",
-  "title": "PharmaLog 1.0.6 Güncelleme Kontrol Düzeltmesi",
-  "publishedAt": "2026-07-19",
-  "mandatory": false,
-  "installerUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.6.zip",
-  "packageUrl": "https://www.pharmalog.com.tr/updates/pharmalog-1.0.6.zip",
-  "notes": [
-    "Eski arka plan sunucusu HTML döndürürse anlaşılır uyarı gösterilir.",
-    "Manuel güncellemenin doğru klasöre uygulanıp uygulanmadığını kontrol eden dosya eklendi.",
-    "Program sürümü ekranda görünmeye devam eder.",
-    "database.sqlite ve uploads korunur."
-  ]
+    "version":  "1.0.7",
+    "title":  "PharmaLog 1.0.7 Botanik Aktarım Güncellemesi",
+    "publishedAt":  "2026-07-23",
+    "mandatory":  false,
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.7.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.7.zip",
+    "notes":  [
+                  "Botanik elden satışlarından dermokozmetik ve besin destek aktarımı altyapısı eklendi.",
+                  "İlk kurulum ve geriye dönük aktarım için tarih aralığı seçilebilir.",
+                  "Yakın dönem otomatik senkron ile iade/silme işlemleri PharmaLog ziyaretlerine yansır.",
+                  "Aktarım anahtarı ile güvenli yerel entegrasyon sağlandı.",
+                  "database.sqlite ve uploads korunur."
+              ]
 }
