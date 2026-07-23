@@ -1,14 +1,14 @@
 ﻿{
-    "version":  "1.0.9",
-    "title":  "PharmaLog 1.0.9 Botanik Önizlemeli Aktarım",
+    "version":  "1.0.10",
+    "title":  "PharmaLog 1.0.10 Güncelleme Mekanizması Onarımı",
     "publishedAt":  "2026-07-23",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.9.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.9.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.10.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.10.zip",
     "notes":  [
-                  "Ayarlar ekranına Botanik Satış Aktarımı kartı eklendi.",
-                  "Tarih aralığı seçilince satışlar önce önizleme olarak gösterilir, onay verilmeden kaydedilmez.",
-                  "Yeni açılacak danışanlar ve mevcut danışanlara eklenecek ürünler listelenir.",
+                  "Program içinden güncelleme kurulumunu başlatan mekanizma güçlendirildi.",
+                  "Ayarlar ekranındaki Botanik Satış Aktarımı artık önizleme ve onayla kayıt akışını içerir.",
+                  "Yeni açılacak danışanlar ve mevcut danışanlara eklenecek ürünler kayıttan önce listelenir.",
                   "Sadece isme bağlı dermokozmetik/besin destek satışları aktarılır.",
                   "database.sqlite ve uploads korunur."
               ]
