@@ -1,15 +1,15 @@
 ﻿{
-    "version":  "1.0.7",
-    "title":  "PharmaLog 1.0.7 Botanik Aktarım Güncellemesi",
+    "version":  "1.0.8",
+    "title":  "PharmaLog 1.0.8 Güncelleme Kurulum Düzeltmesi",
     "publishedAt":  "2026-07-23",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.7.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.7.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.8.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.8.zip",
     "notes":  [
+                  "Program içinden güncelleme kurulumunda sunucunun kapanmaması sorunu düzeltildi.",
                   "Botanik elden satışlarından dermokozmetik ve besin destek aktarımı altyapısı eklendi.",
                   "İlk kurulum ve geriye dönük aktarım için tarih aralığı seçilebilir.",
                   "Yakın dönem otomatik senkron ile iade/silme işlemleri PharmaLog ziyaretlerine yansır.",
-                  "Aktarım anahtarı ile güvenli yerel entegrasyon sağlandı.",
                   "database.sqlite ve uploads korunur."
               ]
 }
