@@ -1,15 +1,14 @@
 ﻿{
-    "version":  "1.0.12",
-    "title":  "PharmaLog 1.0.12 Program İçi Güncelleme Düzeltmesi",
-    "publishedAt":  "2026-07-23",
+    "version":  "1.0.13",
+    "title":  "PharmaLog 1.0.13 Botanik Terminal Bağlantı Düzeltmesi",
+    "publishedAt":  "2026-07-24",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.12.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.12.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.13.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.13.zip",
     "notes":  [
-                  "Program içinden güncelleme başlatma sistemi daha güvenilir hale getirildi.",
-                  "Güncelleyici artık doğrudan arka planda PowerShell ile çalışır ve işlem logu yazar.",
-                  "Çalışan PharmaLog sunucusu PID ve klasör yoluna göre kapatılıp dosyalar yenilenir.",
-                  "Danışan verileri, database.sqlite ve uploads klasörü korunur.",
-                  "Botanik terminal yardımcı servisi düzenlemeleri korunur."
+                  "PharmaLog ana bilgisayar, Botanik terminal olan bilgisayarlarda Botanik yardımcı servisi ana başlatmada da otomatik açılır.",
+                  "Botanik aktarım ekranındaki Failed to fetch hatası yerine yapılması gerekeni anlatan net uyarı gösterilir.",
+                  "Botanik verisinin bu ekranın açıldığı bilgisayardaki Botanik SQL erişimiyle okunduğu belirtildi.",
+                  "Danışan verileri, database.sqlite ve uploads klasörü korunur."
               ]
 }
