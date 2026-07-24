@@ -1,14 +1,12 @@
 ﻿{
-    "version":  "1.0.16",
-    "title":  "PharmaLog 1.0.16 Türkçe Karakter Düzeltmesi",
-    "publishedAt":  "2026-07-24",
-    "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.16.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.16.zip",
+    "version":  "1.0.17",
+    "title":  "PharmaLog 1.0.17 Ayarlar Türkçe Karakter Düzeltmesi",
     "notes":  [
-                  "Program genelindeki bozuk Türkçe karakterler düzeltildi.",
-                  "Giriş ekranındaki kullanıcı adı, şifre ve güvenli giriş metinleri düzeltildi.",
-                  "Botanik aktarım ve sunucu hata mesajlarındaki karakter bozulmaları temizlendi.",
+                  "Ayarlar \u0026 Bakım ekranında kalan Türkçe karakter bozulmaları temizlendi.",
+                  "Güncelleme paketi temiz build ile hazırlandı; eski bozuk dist dosyaları pakete eklenmedi.",
                   "Danışan verileri, database.sqlite ve uploads klasörü korunur."
-              ]
+              ],
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.17.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.17.zip",
+    "mandatory":  false
 }
