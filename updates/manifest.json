@@ -1,12 +1,13 @@
 ﻿{
-    "version":  "1.0.17",
-    "title":  "PharmaLog 1.0.17 Ayarlar Türkçe Karakter Düzeltmesi",
+    "version":  "1.0.18",
+    "title":  "PharmaLog 1.0.18 Ayarlar Cache Düzeltmesi",
     "notes":  [
-                  "Ayarlar \u0026 Bakım ekranında kalan Türkçe karakter bozulmaları temizlendi.",
-                  "Güncelleme paketi temiz build ile hazırlandı; eski bozuk dist dosyaları pakete eklenmedi.",
+                  "Ayarlar ekranında eski bozuk JS dosyasının cache üzerinden gelmesi engellendi.",
+                  "PharmaLog artık ayrı temiz tarayıcı profiliyle açılır ve her açılışta cache kırıcı adres kullanır.",
+                  "Sunucu dist ve index dosyalarını no-cache başlıklarıyla gönderir.",
                   "Danışan verileri, database.sqlite ve uploads klasörü korunur."
               ],
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.17.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.17.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.18.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.18.zip",
     "mandatory":  false
 }
