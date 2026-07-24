@@ -1,15 +1,14 @@
 ﻿{
-    "version":  "1.0.15",
-    "title":  "PharmaLog 1.0.15 Botanik SQL Sunucusu Düzeltmesi",
+    "version":  "1.0.16",
+    "title":  "PharmaLog 1.0.16 Türkçe Karakter Düzeltmesi",
     "publishedAt":  "2026-07-24",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.15.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.15.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.16.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.16.zip",
     "notes":  [
-                  "Botanik aktarım ekranına Botanik SQL Sunucusu alanı eklendi.",
-                  "Botanik terminal kullanımlarında SQL sunucusu elle yazılarak veri okunabilir.",
-                  "Botanik yardımcı servis girilen SQL sunucusunu kaydeder ve sonraki denemelerde kullanır.",
-                  "Botanik aktarım bölümündeki Türkçe karakter bozulmaları düzeltildi.",
+                  "Program genelindeki bozuk Türkçe karakterler düzeltildi.",
+                  "Giriş ekranındaki kullanıcı adı, şifre ve güvenli giriş metinleri düzeltildi.",
+                  "Botanik aktarım ve sunucu hata mesajlarındaki karakter bozulmaları temizlendi.",
                   "Danışan verileri, database.sqlite ve uploads klasörü korunur."
               ]
 }
