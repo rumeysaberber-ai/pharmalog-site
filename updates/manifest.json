@@ -1,15 +1,15 @@
 ﻿{
-    "version":  "1.0.11",
-    "title":  "PharmaLog 1.0.11 Terminal Botanik Yardımcı Servisi",
+    "version":  "1.0.12",
+    "title":  "PharmaLog 1.0.12 Program İçi Güncelleme Düzeltmesi",
     "publishedAt":  "2026-07-23",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.11.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.11.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.12.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.12.zip",
     "notes":  [
-                  "Botanik ana bilgisayarı PharmaLog terminal ise, terminalde yerel Botanik yardımcı servisi otomatik başlatılır.",
-                  "Ayarlar ekranındaki Botanik aktarımı terminaldeki Botanik SQL verisini okuyup ana PharmaLog bilgisayarına önizleme/kayıt yaptırır.",
-                  "Tarih aralığı seçilince kayıt yapılmadan önce yeni danışanlar ve eklenecek ürünler listelenir.",
-                  "Sadece isme bağlı dermokozmetik/besin destek satışları aktarılır.",
-                  "database.sqlite ve uploads korunur."
+                  "Program içinden güncelleme başlatma sistemi daha güvenilir hale getirildi.",
+                  "Güncelleyici artık doğrudan arka planda PowerShell ile çalışır ve işlem logu yazar.",
+                  "Çalışan PharmaLog sunucusu PID ve klasör yoluna göre kapatılıp dosyalar yenilenir.",
+                  "Danışan verileri, database.sqlite ve uploads klasörü korunur.",
+                  "Botanik terminal yardımcı servisi düzenlemeleri korunur."
               ]
 }
