@@ -1,15 +1,15 @@
 ﻿{
-    "version":  "1.0.14",
-    "title":  "PharmaLog 1.0.14 Oturum ve Güncelleme Düzeltmesi",
+    "version":  "1.0.15",
+    "title":  "PharmaLog 1.0.15 Botanik SQL Sunucusu Düzeltmesi",
     "publishedAt":  "2026-07-24",
     "mandatory":  false,
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.14.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.14.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.15.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.15.zip",
     "notes":  [
-                  "Program içinden güncelleme başlatma akışı VBS başlatıcı ve başlangıç kontrolüyle güçlendirildi.",
-                  "Giriş bilgisi bu bilgisayarda hatırlanır; program kapanıp açılsa bile oturum korunur.",
-                  "PharmaLog web uygulama ikonu ve manifest eklendi; Edge/Chrome app pencereleri PharmaLog logosunu kullanır.",
-                  "pharmalog_sessions.json güncellemelerde korunur.",
+                  "Botanik aktarım ekranına Botanik SQL Sunucusu alanı eklendi.",
+                  "Botanik terminal kullanımlarında SQL sunucusu elle yazılarak veri okunabilir.",
+                  "Botanik yardımcı servis girilen SQL sunucusunu kaydeder ve sonraki denemelerde kullanır.",
+                  "Botanik aktarım bölümündeki Türkçe karakter bozulmaları düzeltildi.",
                   "Danışan verileri, database.sqlite ve uploads klasörü korunur."
               ]
 }
