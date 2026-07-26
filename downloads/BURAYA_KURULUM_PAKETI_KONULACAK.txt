@@ -1,0 +1,5 @@
+Bu klasöre yeni kurulum için hazırlanacak dosyayı koyacağız:
+
+PharmaLog-Kurulum.zip
+
+Bu paket yeni kurulum içindir. Güncelleme paketleri için ../updates klasörünü kullanın.
