@@ -1,14 +1,14 @@
 ﻿{
-    "version":  "1.0.23",
-    "title":  "PharmaLog 1.0.23 Hızlı Erişim ve Simge Güncellemesi",
+    "version":  "1.0.24",
+    "title":  "PharmaLog 1.0.24 Sürüm ve Simge Düzeltmesi",
     "notes":  [
-                  "Sol menüye Botanik Satış Aktarımı hızlı erişim butonu eklendi.",
-                  "Sol menüye İleti Yönetim Sistemi hızlı erişim butonu eklendi.",
-                  "Butonlar Ayarlar sayfasındaki ilgili bölüme doğrudan kaydırır.",
-                  "PharmaLog favicon/uygulama simgesi eklendi; görev çubuğu simgesi için altyapı güçlendirildi.",
+                  "Program sürümünün bazı bilgisayarlarda 1.0.0 görünmesine neden olan sürüm okuma sorunu düzeltildi.",
+                  "PharmaLog penceresi Edge yerine PharmaLog ikonlu kısayol üzerinden açılır.",
+                  "Görev çubuğu simgesi için PharmaLog ikon altyapısı güçlendirildi.",
+                  "Sol menüdeki Botanik Satış Aktarımı ve İleti Yönetim Sistemi hızlı erişimleri korunur.",
                   "Danışan verileri, database.sqlite, uploads ve Botanik SQL ayarları korunur."
               ],
-    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.23.exe",
-    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.23.zip",
+    "installerUrl":  "https://www.pharmalog.com.tr/updates/PharmaLog_Guncelleme_1.0.24.exe",
+    "packageUrl":  "https://www.pharmalog.com.tr/updates/pharmalog-1.0.24.zip",
     "mandatory":  false
 }
